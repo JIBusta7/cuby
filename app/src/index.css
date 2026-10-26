@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-grape: #6544d8;
+  --color-grape-deep: #4b2fb3;
+  --color-ocean: #3478d4;
+  --color-coral: #f16b63;
+  --color-sun: #f4be46;
+  --color-mint: #27b88a;
+  --color-night: #171629;
+  --color-night-2: #22203a;
+  --color-night-3: #2e2b4d;
+  --color-ink: #0e0d1c;
+  --color-mist: #edeafb;
+
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Sora', ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-chunk: 0 6px 0 0 rgb(0 0 0 / 0.28);
+  --shadow-chunk-sm: 0 4px 0 0 rgb(0 0 0 / 0.28);
+  --shadow-chunk-press: 0 1px 0 0 rgb(0 0 0 / 0.28);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: var(--color-night);
+    color: white;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+  }
+  input {
+    user-select: text;
+  }
+  :focus-visible {
+    outline: 4px solid var(--color-sun);
+    outline-offset: 4px;
+    border-radius: 18px;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+}
+
+@layer components {
+  .chunk {
+    box-shadow: var(--shadow-chunk);
+    transition: transform 90ms ease-out, box-shadow 90ms ease-out, filter 120ms ease-out;
+  }
+  .chunk:hover:not(:disabled) {
+    filter: brightness(1.06);
+  }
+  .chunk:active:not(:disabled) {
+    transform: translateY(5px);
+    box-shadow: var(--shadow-chunk-press);
+  }
+  .chunk-sm {
+    box-shadow: var(--shadow-chunk-sm);
+  }
+  .range-chunk {
+    appearance: none;
+    height: 14px;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 0.15);
+  }
+  .range-chunk::-webkit-slider-thumb {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: var(--color-sun);
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 0.3);
+    cursor: pointer;
+  }
+}

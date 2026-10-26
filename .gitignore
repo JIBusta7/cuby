@@ -1,0 +1,13 @@
+# Sistema
+.DS_Store
+
+# App (Node)
+node_modules/
+dist/
+*.tsbuildinfo
+test-results/
+playwright-report/
+
+# Firmware (PlatformIO)
+.pio/
+firmware/.vscode/
