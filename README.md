@@ -3,6 +3,9 @@
 Un cubo de 293 LEDs que cambia de color cuando lo girás. Es un juego para igualar colores contra el
 reloj y también una lámpara que reacciona a la música.
 
+**Probarlo online: https://cuby-sandy.vercel.app** (Chrome o Edge de escritorio; sin el cubo usa el
+simulador).
+
 Proyecto del Obligatorio 1 de **Diseño Multimedia 1**, Facultad de Diseño, Universidad ORT Uruguay
 (2026).
 
